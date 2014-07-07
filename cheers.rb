@@ -13,7 +13,14 @@ else
       puts "Give me a... #{char}"
     end
   end
-
   puts "#{name}\'s just GRAND"
+
+  puts "Hey #{name}, when is your birthday?"
+  birthday = gets.chomp
+  if birthday.empty?
+    puts "You must give me your bday"
+  else
+    puts "Your bday is... #{birthday}"
+  end
 
 end
