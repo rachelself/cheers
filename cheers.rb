@@ -24,9 +24,6 @@ else
   else
     today = Date.today.yday
     bday = Date.parse("#{birthday}").yday
-    # puts "Your bday is #{birthday}"
-    # puts "today's yday: #{today}"
-    # puts "bday's yday: #{bday}"
 
     if today == bday
       puts "Happy Birthday!"
@@ -40,7 +37,9 @@ else
   end
 end
 
-
+# puts "Your bday is #{birthday}"
+# puts "today's yday: #{today}"
+# puts "bday's yday: #{bday}"
 
     # bday = Date.parse("#{birthday}")
     # puts "bday: #{bday}"
@@ -84,10 +83,7 @@ end
     # else
     #   puts "You are not old enough to have a birthday yet"
 
-
-
     # c = Date.new("#{bday}.month")
-
 
     # d = Date._strptime("#{birthday}", "%Y-%-m-%-d")
     # puts "bday: #{d}"
