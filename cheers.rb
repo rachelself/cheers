@@ -17,29 +17,35 @@ else
   end
   puts "#{name}\'s just GRAND"
 
-  puts "Hey #{name}, when is your birthday? ...(yyyy-mm-dd)"
+  puts "Hey #{name}, when is your birthday?"
   birthday = gets.chomp
   if birthday.empty?
     puts "You must give me your bday"
   else
-    puts "Your bday is #{birthday}"
-    # bday = Date.parse("#{birthday}")
-    # puts "bday: #{bday}"
-    # now = Date.today
-    # puts "today: #{now}"
-
     today = Date.today.yday
-    puts "today's yday: #{today}"
-
     bday = Date.parse("#{birthday}").yday
-    puts "bday's yday: #{bday}"
+    # puts "Your bday is #{birthday}"
+    # puts "today's yday: #{today}"
+    # puts "bday's yday: #{bday}"
 
     if today == bday
       puts "Happy Birthday!"
     elsif today > bday
-      # diff = 365 - 
-      # puts "Your birthday is in "
+      diff = (365 - today) + bday
+      puts "Your birthday is in #{diff} days. Happy Birthday in advance!"
+    else
+      diff = bday-today
+      puts "Your birthday is in #{diff} days. Happy Birthday in advance!"
+    end
+  end
+end
 
+
+
+    # bday = Date.parse("#{birthday}")
+    # puts "bday: #{bday}"
+    # now = Date.today
+    # puts "today: #{now}"
 
     # n = now.year
     # c = Date.new(n, bday.month, bday.day)
@@ -54,14 +60,10 @@ else
     #   puts "diff: #{diff}"
     # end
 
-
-
-
     # ydiff = now.year - bday.year
     # mdiff = now.month - bday.month
     # ddiff = now.day - bday.day
-    #
-    #
+
     # if ydiff > 0
     #   puts "diff: #{ydiff}"
     #   if mdiff == 0
@@ -90,7 +92,3 @@ else
     # d = Date._strptime("#{birthday}", "%Y-%-m-%-d")
     # puts "bday: #{d}"
     # puts "date: #{bday}"
-
-  end
-
-end
